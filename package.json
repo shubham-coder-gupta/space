@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +11,8 @@
     "dev:ssr": "ng run SpaceX:serve-ssr",
     "serve:ssr": "node dist/SpaceX/server/main.js",
     "build:ssr": "ng build --prod && ng run SpaceX:server:production",
-    "prerender": "ng run SpaceX:prerender"
+    "prerender": "ng run SpaceX:prerender",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -27,9 +28,11 @@
     "@angular/platform-server": "~9.1.11",
     "@angular/router": "~9.1.11",
     "@nguniversal/express-engine": "^9.1.1",
-    "express": "^4.15.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "typescript": "~3.8.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -53,5 +56,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "engines": {
+    "node": "12.18.1",
+    "npm": "6.14.5"
   }
 }
