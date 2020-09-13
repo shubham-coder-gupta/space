@@ -38,8 +38,9 @@
   </div>  
   <div class="container">
     <div class="card" *ngFor="let data of dataList">
+      <div class="card-container">
       <div class="image">
-        <img [src]="data.links.mission_patch_small">
+        <img [src]="data.links.mission_patch_small" alt="rocket images">
        </div>
        <span class="name">
         {{data.mission_name}} #{{data.flight_number}}
@@ -56,6 +57,7 @@
        <span class="text">
         Successful Landing <span>{{data.launch_landing}}</span>
        </span>       
+    </div>
     </div>
    </div> 
    <div class="noRecord" *ngIf="noResult">

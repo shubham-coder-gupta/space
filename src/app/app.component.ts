@@ -11,7 +11,6 @@ import { debounceTime, find } from 'rxjs/operators';
 export class AppComponent implements OnInit{
   title = 'SpaceX';
   dataList: any;
-  photoUrl: any;
   param={};
   chips = [
     {name: '2006',state:false},
