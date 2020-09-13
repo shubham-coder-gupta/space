@@ -39,7 +39,7 @@
   <div class="container">
     <div class="card" *ngFor="let data of dataList">
       <div class="image">
-        <img src="/assets/download.png">
+        <img [src]="data.links.mission_patch_small">
        </div>
        <span class="name">
         {{data.mission_name}} #{{data.flight_number}}
