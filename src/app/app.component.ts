@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './product.service';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { debounceTime, find } from 'rxjs/operators';
 
@@ -15,6 +14,8 @@ export class AppComponent implements OnInit{
   photoUrl: any;
   param={};
   chips = [
+    {name: '2006',state:false},
+    {name: '2007',state:false},
     {name: '2008',state:false},
     {name: '2009',state:false},
     {name: '2010',state:false},
@@ -39,7 +40,7 @@ export class AppComponent implements OnInit{
   ]
   noResult: any;
 
-  constructor(private service:ProductService,private sanitizer:DomSanitizer,
+  constructor(private service:ProductService,
     private router:Router,private _route:ActivatedRoute
     ){
 
@@ -94,18 +95,12 @@ export class AppComponent implements OnInit{
     this.service.getListing(params).subscribe(
       (data: any) => {
         if (data.errCode == -1) {
-          // this.toastr.showLoadError(data.message, { src: this.compName });
         } else {
           this.dataList = data;
-          // this.photoUrl = this.sanitizer.bypassSecurityTrustUrl(this.dataList[0]['links']['mission_patch']);
           this.dataList &&this.dataList.length==0?this.noResult=true:this.noResult=false 
         }       
-        // this.loaderService.deActivate();
       },
       error => {
-        // this.toastr.showInternalServerError(error);
-        // this.loaderService.deActivate();
-      //  this.dataTableService.rerenderSingle('dtTriggerMvlanProfile');
       });
 
    }

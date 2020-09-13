@@ -31,7 +31,7 @@
          </div> 
          <div class="chips"> 
          <mat-chip-list  [selectable]="true">
-          <mat-chip *ngFor="let chip of chipLanding"  #chip3="matChip" [selected]="chip.state" (selectionChange)="changeSelected('launch_successful',$event)"(click)="chip3.select()" >{{chip.name}}</mat-chip>
+          <mat-chip *ngFor="let chip of chipLanding"  #chip3="matChip" [selected]="chip.state" (selectionChange)="changeSelected('launch_landing',chip.name,$event)"(click)="chip3.select()" >{{chip.name}}</mat-chip>
         </mat-chip-list>
     </div>
         </div> 
@@ -54,7 +54,7 @@
         Successful Launch <span>{{data.launch_success}}</span> 
        </span>
        <span class="text">
-        Successful Landing <span>{{data.launch_success}}</span>
+        Successful Landing <span>{{data.launch_landing}}</span>
        </span>       
     </div>
    </div> 
@@ -62,4 +62,8 @@
      No records Found
     </div> 
    </div>
+   <div class="footer">
+     Developed By: Shubham Gupta
+  </div>
+
 </div>  

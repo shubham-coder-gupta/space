@@ -40,13 +40,12 @@
   }
   .content{
       display: flex;
-      margin: 20px;
+      margin: 20px 20px 0px 20px; 
       padding: 10px;
       background-color: #e9eaeb;
   }
   .launch_year{
-    width: 200px;
-    margin: 10px;
+    width: 280px;
     color: green;
   }
   .mat-chip-list-wrapper.mat-chip{
@@ -82,21 +81,48 @@
     font-size: 20px;
 
   }
+  .footer{
+    font-size: 20px;
+    color: green;
+    padding: 5px;
+    margin-left: 20px;
+    text-align: center;
+  }
   @media (max-width: 700px){
     .content{
         display: flex;
         flex-direction: column;
     }
+    .card{
+        width:100%;
+    }
     .chips{
-        margin-left: 25px;;
+        margin-left: 20%;
+    }
+    .heading{
+        font-size: 20px;
     }
 
 }
+@media (max-width:375px) {
+    .launch_year{
+        width: 200px;
+      }
+      .chips{
+        margin-left: 0%;
+    }     
+    
+}
+
+
+
 @media screen and (min-width:840px) and (max-width:1024px) {
         .container{
         display: flex;
         justify-content: space-around;
     }
+  
+
 }   
     @media screen and (min-width:701px) and (max-width:839px) {
         .container{
@@ -105,7 +131,7 @@
     }
     .card{
         width:170px;
-        margin:15px;
+        margin: 20px 0px 20px 0px;
     }
     .image{
         img{
@@ -113,7 +139,9 @@
             height: 200px;   
          }
       }
-    
+       .launch_year{
+        width: 250px;
+      }
 
 }
 
