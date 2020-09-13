@@ -1,0 +1,121 @@
+   .card {
+    max-width: 400px;
+    max-height: 420px;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width:200px;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .image{
+    width: 200px;
+    img{
+        width: 185px;
+        height: 200px;    }
+  }
+  .name{
+    font-size: 16px;
+    font-weight: 500;
+    color: darkblue;
+    margin: 10px;
+  }
+  .text{
+        font-size: 16px;
+        font-weight: 500;
+        margin: 5px 5px 5px 10px;  
+        color: black;
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            color:blue;        
+        }
+  }
+  .content{
+      display: flex;
+      margin: 20px;
+      padding: 10px;
+      background-color: #e9eaeb;
+  }
+  .launch_year{
+    width: 200px;
+    margin: 10px;
+    color: green;
+  }
+  .mat-chip-list-wrapper.mat-chip{
+   width: 100px!important;
+  }
+  .launch{
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color:darkgreen;
+  }
+  .heading{
+    font-size: 25px;
+    color: green;
+    padding: 5px;
+    margin-left: 20px;
+  }
+  .filter{
+    font-size: 20px;
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+    height:100%;
+  }
+  .chips{
+      margin-left: 15%;
+  }
+  .noRecord{
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+    font-size: 20px;
+
+  }
+  @media (max-width: 700px){
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .chips{
+        margin-left: 25px;;
+    }
+
+}
+@media screen and (min-width:840px) and (max-width:1024px) {
+        .container{
+        display: flex;
+        justify-content: space-around;
+    }
+}   
+    @media screen and (min-width:701px) and (max-width:839px) {
+        .container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .card{
+        width:170px;
+        margin:15px;
+    }
+    .image{
+        img{
+            width: 170px;
+            height: 200px;   
+         }
+      }
+    
+
+}
+
+
+
