@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-    width:200px;
+    width:175px;
   }
   .container{
     display: flex;
@@ -16,11 +16,11 @@
     flex-wrap: wrap;
   }
   .image{
-    width: 190px;
+    width: 170px;
     border: 1px solid lightgrey;
     margin-top: 10px;    
     img{
-        width: 185px;
+        width: 165px;
         height: 200px;    }
   }
   .name{
@@ -110,14 +110,31 @@
     }
 
 }
-@media (max-width:375px) {
+@media screen and (max-width:376px) and (min-width:374px) {
+    .launch_year{
+        width: 200px;
+        margin-left:12%
+      }
+      .chips{
+        margin-left: 0%;
+    }
+    .launch_success{
+        margin-left:12%
+    }
+    .launch_landing{
+        margin-left:12%
+
+    }     
+    
+}
+@media (max-width:325px){
     .launch_year{
         width: 200px;
       }
       .chips{
         margin-left: 0%;
-    }     
-    
+    }
+
 }
 @media screen and (min-width:375px) and (max-width:425px) {
     .card-container{
