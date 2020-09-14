@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   title = 'SpaceX';
   dataList: any;
   param={};
+  heading="Space X Launch Programs"
   chips = [
     {name: '2006',state:false},
     {name: '2007',state:false},
